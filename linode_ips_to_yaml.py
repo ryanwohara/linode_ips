@@ -5,6 +5,7 @@ from __future__ import absolute_import
 import yaml
 import linode
 
+// Replace the API key with your own key (this one is not valid anyway)
 api = linode.Api('zPxbpoyAjSNmskScqrgsNmcb2MDw8ooNBY7Q9D0uyhV6pWvUmVGftq9eWXgUSDPF')
 
 def private(linodeID):
