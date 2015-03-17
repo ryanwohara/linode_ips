@@ -16,13 +16,13 @@ grain = {}
 while True:
         complete = 1
 	linode_list = api.linode.list()
-        grain = {u'linode':{u'ips':{}}}
+        grain = {u'linode':{u'ipv4':{}}}
 
         for selector in linode_list:
             ip = api.linode.ip.list(LinodeID=selector['LINODEID'])
 
-            grain[u'linode'][u'ips'][selector[u'LABEL']] = {}
-            linode_pointer = grain[u'linode'][u'ips'][selector[u'LABEL']]
+            grain[u'linode'][u'ipv4'][selector[u'LABEL']] = {}
+            linode_pointer = grain[u'linode'][u'ipv4'][selector[u'LABEL']]
 
             if len(ip) == 1:
                 private(selector[u'LINODEID'])
